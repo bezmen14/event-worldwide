@@ -28,14 +28,11 @@
 В папках 
 /backend
 /frontend
+/event_worldwideBot
+
 запустить команду
 
 ```
 npm i
 npm start
-```
-В папке 
-/event_worldwideBot
-```
-npm i
-npm start
+
