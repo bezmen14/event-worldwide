@@ -1,6 +1,5 @@
 import { List, Avatar, Button } from 'antd';
-import { useRef } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addOneSubscribe } from '../../redux/actions/subscribeAC';
 
 

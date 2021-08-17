@@ -37,4 +37,5 @@ npm start
 В папке 
 /event_worldwideBot
 ```
-node bot.js
+npm i
+npm start

@@ -1,4 +1,3 @@
-// import style from './SignIn.module.css'
 import SignUp from '../SignUp/SignUp.module.css'
 import styleContainer from '../Container/container.module.css'
 
@@ -35,7 +34,6 @@ function SignIn() {
         localStorage.setItem('phone', user.phone)
         localStorage.setItem('photo', user.Userphoto)
         localStorage.setItem('password', user.password)
-        // window.location.replace('http://localhost:3000/')
         HomeButton();
       }
     },[user]);
@@ -43,7 +41,6 @@ function SignIn() {
     const submitHandler = (event) => {
         event.preventDefault()
         dispatch(getFormUserDataAuth(inputEmail, inputPassword))
-        // HomeButton();
     }
 
     return (

@@ -14,7 +14,6 @@ const QuickSearchForm = () => {
 
   const submitHandler = (formData) => {
     dispatch(getEventsByKeyword(formData))
-    // придумать как очищать форму после отправки данных
   }
 
 

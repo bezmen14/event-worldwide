@@ -1,4 +1,3 @@
-'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('Subscribes', {
@@ -6,37 +5,37 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       Userid: {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'Users'
+            tableName: 'Users',
           },
-          key: 'id'
+          key: 'id',
         },
       },
       Eventid: {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'Events'
+            tableName: 'Events',
           },
-          key: 'id'
+          key: 'id',
         },
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('Subscribes');
-  }
+  },
 };

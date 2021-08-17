@@ -1,4 +1,3 @@
-import { List, Avatar, Button } from 'antd';
 import 'antd/dist/antd.css';
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useEffect } from 'react';
@@ -17,7 +16,6 @@ function PersonalAreaEventlist() {
   const favouriteList = useSelector(state => state.favourite);
 
   const coordinates = favouriteList.map((item) => [item.Event.Category, item.Event.Genre, item.Event.Name])
-  // const titles = favouriteList.map((item) => item.Event.Name)
 
 
   const dispatch = useDispatch()
@@ -26,7 +24,6 @@ function PersonalAreaEventlist() {
     dispatch(getFavouriteEvents())
   }, [])
 
-  console.log(favouriteList)
 
   return (
 

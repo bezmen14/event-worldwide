@@ -3,16 +3,11 @@ import {
   Form,
   Input,
   Button,
-  Radio,
   Select,
-  Cascader,
   DatePicker,
-  InputNumber,
-  TreeSelect,
-  Switch,
 } from 'antd';
-import { useDispatch, useSelector } from 'react-redux';
-import { getEventsByParams, setAllByParams } from '../../redux/actions/eventfull';
+import { useDispatch } from 'react-redux';
+import { getEventsByParams } from '../../redux/actions/eventfull';
 
 function SearchForm() {
   const [componentSize, setComponentSize] = useState('large');
@@ -26,8 +21,6 @@ function SearchForm() {
 
   const submitHandler = (formData) => {
     dispatch(getEventsByParams(formData))
-    // придумать как очищать форму после отправки данных
-    // setTodoInput('')
   }
 
 
